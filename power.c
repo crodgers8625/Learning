@@ -24,9 +24,15 @@ double power(double x, int n)
   
   if(n == 0) return 1;
   
-  for(i = 0; i < n; ++i){
-  prod *= x;
+  while(n % 2 == 0){
+    prod *= x;
+    --i;
   }
   
+  if(n % 2 == 0){
+    return prod*prod;
+  }else{
+    return x*prod*prod;
+  }
   return prod;
 }
